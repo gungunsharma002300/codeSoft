@@ -1,0 +1,107 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI';
+  background: linear-gradient(120deg, #0f172a, #020617);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: white;
+}
+
+.calculator {
+  background: rgba(255,255,255,0.05);
+  padding: 25px;
+  border-radius: 25px;
+  backdrop-filter: blur(20px);
+  box-shadow: 0 0 40px rgba(0,255,255,0.2);
+  text-align: center;
+}
+
+#display {
+  width: 100%;
+  height: 60px;
+  font-size: 22px;
+  text-align: right;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  border: none;
+  padding: 10px;
+  box-shadow: inset 0 0 10px rgba(0,255,255,0.3);
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 70px);
+  gap: 10px;
+}
+
+button {
+  padding: 15px;
+  border-radius: 12px;
+  border: none;
+  background: linear-gradient(45deg, cyan, purple);
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 15px cyan, 0 0 25px purple;
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+/* AC Button Special */
+.ac {
+  background: linear-gradient(45deg, #ff4d4d, #ff0000);
+}
+
+.ac:hover {
+  box-shadow: 0 0 15px red;
+}
+
+.zero {
+  grid-column: span 2;
+}
+
+.extras {
+  margin-top: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.history {
+  margin-top: 15px;
+  max-height: 120px;
+  overflow-y: auto;
+  text-align: left;
+}
+
+/* Light Theme */
+.light {
+  background: linear-gradient(120deg, #ffffff, #e2e8f0);
+  color: black;
+}
+
+.light .calculator {
+  background: rgba(0,0,0,0.05);
+}
+
+.light #display {
+  background: #fff;
+  color: black;
+}
+
+.light button {
+  background: linear-gradient(45deg, #3b82f6, #9333ea);
+}
+
+.light .ac {
+  background: linear-gradient(45deg, #ff4d4d, #ff0000);
+}

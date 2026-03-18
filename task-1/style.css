@@ -1,0 +1,182 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI';
+  scroll-behavior: smooth;
+}
+
+body {
+  background: linear-gradient(120deg, #0f172a, #1e293b);
+  color: white;
+}
+
+/* NAVBAR */
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 60px;
+  backdrop-filter: blur(10px);
+  position: sticky;
+  top: 0;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav li {
+  margin-left: 25px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+}
+
+/* HERO */
+.hero {
+  text-align: center;
+  padding: 120px 20px;
+}
+
+.hero h1 {
+  font-size: 50px;
+  background: linear-gradient(to right, cyan, pink);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.typing {
+  color: cyan;
+  margin-top: 10px;
+}
+
+/* BUTTON */
+.btn {
+  margin-top: 20px;
+  display: inline-block;
+  padding: 12px 25px;
+  border-radius: 30px;
+  background: linear-gradient(45deg, cyan, purple);
+  color: white;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 20px cyan;
+}
+
+/* ABOUT */
+.about-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  padding: 60px;
+}
+.profile-box {
+  position: relative;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden; /* 🔥 Important */
+}
+
+.profile-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* 🔥 Image properly fit hogi */
+  border-radius: 50%;
+}
+
+/* glow ring fix */
+.profile-box::before {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: linear-gradient(45deg, cyan, purple, pink);
+  z-index: -1;
+  animation: spin 4s linear infinite;
+}
+.profile-box img {
+  transition: 0.4s;
+}
+
+.profile-box:hover img {
+  transform: scale(1.05);
+}
+
+
+
+@keyframes spin {
+  100% { transform: rotate(360deg); }
+}
+
+/* SKILLS */
+.skill-bar {
+  width: 60%;
+  margin: 20px auto;
+}
+
+.bar {
+  height: 8px;
+  background: #333;
+  border-radius: 10px;
+}
+
+.fill {
+  height: 8px;
+  background: linear-gradient(to right, cyan, purple);
+}
+
+/* PROJECTS */
+.projects {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 40px;
+}
+
+.card {
+  background: rgba(255,255,255,0.05);
+  padding: 20px;
+  border-radius: 15px;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 20px cyan;
+}
+
+/* ANIMATION */
+.fade {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: 1s;
+}
+
+.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* CONTACT */
+#contact {
+  text-align: center;
+  padding: 50px;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+}
